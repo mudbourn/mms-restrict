@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "info.mudbourn.mmsrestrict.mixin.trades",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "AbstractVillagerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

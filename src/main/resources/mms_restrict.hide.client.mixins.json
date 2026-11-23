@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "info.mudbourn.mmsrestrict.mixin.hide",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "CreativeModeTabsAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "info.mudbourn.mmsrestrict.mixin.equipment",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "LivingEntityMixin",
+    "MobMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

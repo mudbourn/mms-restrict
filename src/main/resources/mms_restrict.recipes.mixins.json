@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "info.mudbourn.mmsrestrict.mixin.recipes",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "RecipeManagerMixin",
+    "RecipeMapInvoker"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

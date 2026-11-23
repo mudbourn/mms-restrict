@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "mms_restrict",
+  "version": "${version}",
+  "name": "MMS Restrict",
+  "description": "One config for every embargo MMS needs: what can be obtained, used, kept, shown and generated.",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "info.mudbourn.mmsrestrict.MmsRestrict"
+    ],
+    "client": [
+      "info.mudbourn.mmsrestrict.client.MmsRestrictClient"
+    ],
+    "jei_mod_plugin": [
+      "info.mudbourn.mmsrestrict.client.jei.RestrictJeiPlugin"
+    ]
+  },
+  "mixins": [
+    "mms_restrict.recipes.mixins.json",
+    "mms_restrict.trades.mixins.json",
+    "mms_restrict.equipment.mixins.json",
+    "mms_restrict.structures.mixins.json",
+    {
+      "config": "mms_restrict.hide.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.20.1",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "jei": "*",
+    "trinkets": "*"
+  }
+}
