@@ -4,3 +4,10 @@ run/
 libs/
 .DS_Store
 *.log
+*.pem
+*.txt
+
+# Internal design and style notes; not part of the published repo
+*.md
+!README.md
+!docs/*.md
