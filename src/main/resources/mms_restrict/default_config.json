@@ -163,11 +163,6 @@
     {
       "name": "shield-morningstar-tiers",
       "match": [
-        "expanded_weaponry:wooden_shield",
-        "expanded_weaponry:stone_shield",
-        "expanded_weaponry:copper_shield",
-        "expanded_weaponry:golden_shield",
-        "expanded_weaponry:diamond_shield",
         "weaponsexpanded:wooden_morningstar",
         "weaponsexpanded:stone_morningstar",
         "weaponsexpanded:copper_morningstar",
@@ -184,16 +179,6 @@
         "mms_weapons:wooden_morningstar",
         "mms_weapons:stone_morningstar",
         "mms_weapons:copper_morningstar",
-        "mms_weapons:azurite_shield",
-        "mms_weapons:lunatic_shield",
-        "mms_weapons:magmatic_gel_shield",
-        "mms_weapons:obsidian_shield",
-        "mms_weapons:ruby_shield",
-        "mms_weapons:shadoline_shield",
-        "mms_weapons:shadow_shield",
-        "mms_weapons:sky_wood_shield",
-        "mms_weapons:stellar_stone_shield",
-        "mms_weapons:volucite_shield",
         "mms_weapons:azurite_kite_shield",
         "mms_weapons:lunatic_kite_shield",
         "mms_weapons:magmatic_gel_kite_shield",
@@ -216,7 +201,7 @@
         "mms_weapons:volucite_morningstar"
       ],
       "layers": ["obtain", "hide", "sweep"],
-      "reason": "shields and morningstars only in iron, netherite and phoenix, like Paladins armor"
+      "reason": "kite shields and morningstars only in iron, netherite and phoenix, like Paladins armor"
     },
     {
       "name": "class-gear-unsmeltable",
