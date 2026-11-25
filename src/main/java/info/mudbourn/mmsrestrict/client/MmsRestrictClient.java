@@ -1,5 +1,7 @@
 package info.mudbourn.mmsrestrict.client;
 
+import info.mudbourn.mmsrestrict.client.essential.EssentialClient;
+import info.mudbourn.mmsrestrict.essential.EssentialRestrict;
 import info.mudbourn.mmsrestrict.net.RestrictedPayload;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
@@ -17,5 +19,8 @@ public class MmsRestrictClient implements ClientModInitializer {
             output.getDisplayStacks().removeIf(ClientRestricted::isHidden);
             output.getSearchTabStacks().removeIf(ClientRestricted::isHidden);
         });
+        if (EssentialRestrict.isActive()) {
+            EssentialClient.init();
+        }
     }
 }

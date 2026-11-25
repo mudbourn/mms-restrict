@@ -6,6 +6,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.Strictness;
 import com.google.gson.stream.JsonReader;
+import info.mudbourn.mmsrestrict.essential.EssentialSection;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.resources.Identifier;
 import net.minecraft.util.GsonHelper;
@@ -26,7 +27,13 @@ import java.util.List;
 import java.util.Set;
 
 // The parsed config/mms-restrict.json.
-public record RestrictConfig(List<Rule> rules, int bypassLevel, SweepMode sweepMode, int sweepIntervalSeconds) {
+public record RestrictConfig(
+    List<Rule> rules,
+    int bypassLevel,
+    SweepMode sweepMode,
+    int sweepIntervalSeconds,
+    EssentialSection essential
+) {
 
     private static final Logger LOG = LoggerFactory.getLogger("mms_restrict");
     private static final String DEFAULT_RESOURCE = "/mms_restrict/default_config.json";
@@ -82,7 +89,7 @@ public record RestrictConfig(List<Rule> rules, int bypassLevel, SweepMode sweepM
         for (int i = 0; i < array.size(); i++) {
             rules.add(parseRule(array.get(i).getAsJsonObject(), i + 1));
         }
-        return new RestrictConfig(List.copyOf(rules), level, mode, interval);
+        return new RestrictConfig(List.copyOf(rules), level, mode, interval, EssentialSection.parse(root));
     }
 
     private static Rule parseRule(JsonObject json, int index) {

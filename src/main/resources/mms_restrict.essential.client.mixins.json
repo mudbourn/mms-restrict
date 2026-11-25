@@ -1,0 +1,32 @@
+{
+  "required": false,
+  "package": "info.mudbourn.mmsrestrict.mixin.essential",
+  "compatibilityLevel": "JAVA_21",
+  "plugin": "info.mudbourn.mmsrestrict.essential.EssentialMixinPlugin",
+  "client": [
+    "CommandRegistryMixin",
+    "EmoteCapeMixin",
+    "EssentialConfigMixin",
+    "EssentialKeybindingMixin",
+    "EventBusMixin",
+    "KeyMappingAccessor",
+    "GuiScreenMixin",
+    "GuiUtilMixin",
+    "MultiplayerGuiMixin",
+    "NametagMixin",
+    "NotificationsMixin",
+    "OnlineIndicatorMixin",
+    "OverlayManagerMixin",
+    "PauseMenuDisplayCompanionMixin",
+    "PauseMenuDisplayMixin",
+    "ScreenProxiesMixin",
+    "ScreenshotManagerMixin",
+    "WardrobeMixin",
+    "WardrobeStateMixin",
+    "WearableManagerMixin",
+    "leawind.EmoteCameraMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

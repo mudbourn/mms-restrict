@@ -1,5 +1,6 @@
 package info.mudbourn.mmsrestrict;
 
+import info.mudbourn.mmsrestrict.essential.EssentialSection;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
@@ -16,7 +17,7 @@ import java.util.List;
 /** Shared restriction state and the queries other mods may call. */
 public final class RestrictApi {
 
-    private static volatile RestrictConfig config = new RestrictConfig(List.of(), 2, SweepMode.DELETE, 30);
+    private static volatile RestrictConfig config = new RestrictConfig(List.of(), 2, SweepMode.DELETE, 30, EssentialSection.OFF);
     private static volatile RestrictedSet set = RestrictedSet.EMPTY;
 
     private RestrictApi() {

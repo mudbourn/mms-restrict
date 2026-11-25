@@ -4,6 +4,13 @@
   },
   "sweep_mode": "delete",
   "sweep_interval_seconds": 30,
+  "essential": {
+    "enabled": true,
+    "allow": [
+      "emote_wheel",
+      "emote_selection"
+    ]
+  },
   "rules": [
     {
       "name": "weapons-replaced",

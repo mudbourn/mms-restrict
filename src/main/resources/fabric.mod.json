@@ -6,6 +6,9 @@
   "description": "One config for every embargo MMS needs: what can be obtained, used, kept, shown and generated.",
   "environment": "*",
   "entrypoints": {
+    "preLaunch": [
+      "info.mudbourn.mmsrestrict.essential.EssentialPreLaunch"
+    ],
     "main": [
       "info.mudbourn.mmsrestrict.MmsRestrict"
     ],
@@ -34,6 +37,8 @@
   },
   "suggests": {
     "jei": "*",
-    "trinkets": "*"
+    "trinkets": "*",
+    "essential": "*",
+    "leawind_third_person": "*"
   }
 }
