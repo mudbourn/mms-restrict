@@ -15,6 +15,8 @@ public class EssentialMixinPlugin implements IMixinConfigPlugin {
 
     private static final Logger LOG = LoggerFactory.getLogger("mms_restrict");
     private static final String LEAWIND_PREFIX = "info.mudbourn.mmsrestrict.mixin.essential.leawind.";
+    // Leawind's Third Person compat is switched off for now; set true to bring the emote camera handoff back.
+    public static final boolean LEAWIND_COMPAT = false;
 
     @Override
     public void onLoad(String mixinPackage) {
@@ -32,7 +34,7 @@ public class EssentialMixinPlugin implements IMixinConfigPlugin {
         }
         if (mixinClassName.startsWith(LEAWIND_PREFIX)) {
             FabricLoader loader = FabricLoader.getInstance();
-            return loader.isModLoaded("leawind_third_person") && loader.isModLoaded("perspective_api");
+            return LEAWIND_COMPAT && loader.isModLoaded("leawind_third_person") && loader.isModLoaded("perspective_api");
         }
         return true;
     }

@@ -20,7 +20,7 @@ public final class EssentialClient {
 
     public static void init() {
         FabricLoader loader = FabricLoader.getInstance();
-        boolean leawind = loader.isModLoaded("leawind_third_person") && loader.isModLoaded("perspective_api");
+        boolean leawind = info.mudbourn.mmsrestrict.essential.EssentialMixinPlugin.LEAWIND_COMPAT && loader.isModLoaded("leawind_third_person") && loader.isModLoaded("perspective_api");
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (leawind) {
                 LeawindEmoteCamera.tick(client.player != null);
