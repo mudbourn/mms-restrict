@@ -24,6 +24,7 @@
     "mms_restrict.trades.mixins.json",
     "mms_restrict.equipment.mixins.json",
     "mms_restrict.structures.mixins.json",
+    "mms_restrict.spawns.mixins.json",
     {
       "config": "mms_restrict.hide.client.mixins.json",
       "environment": "client"

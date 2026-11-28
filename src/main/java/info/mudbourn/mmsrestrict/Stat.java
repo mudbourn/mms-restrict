@@ -9,6 +9,7 @@ public enum Stat {
     SPAWNS("spawns denied"),
     STRUCTURES("placement attempts denied"),
     SWEPT("items swept"),
+    REFUNDS("refunds given"),
     USES("uses blocked");
 
     private final String label;

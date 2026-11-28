@@ -3,6 +3,7 @@ package info.mudbourn.mmsrestrict;
 import net.minecraft.resources.Identifier;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.atomic.LongAdder;
 
@@ -14,9 +15,10 @@ public final class Rule {
     private final Set<Identifier> dimensions;
     private final String reason;
     private final SweepMode sweepMode;
+    private final Map<Identifier, Refund> refunds;
     private final LongAdder[] counts = new LongAdder[Stat.values().length];
 
-    public Rule(String name, List<Match> matches, List<java.util.regex.Pattern> recipes, Set<Layer> layers, Set<Identifier> dimensions, String reason, SweepMode sweepMode) {
+    public Rule(String name, List<Match> matches, List<java.util.regex.Pattern> recipes, Set<Layer> layers, Set<Identifier> dimensions, String reason, SweepMode sweepMode, Map<Identifier, Refund> refunds) {
         this.name = name;
         this.matches = List.copyOf(matches);
         this.recipes = List.copyOf(recipes);
@@ -24,6 +26,7 @@ public final class Rule {
         this.dimensions = Set.copyOf(dimensions);
         this.reason = reason;
         this.sweepMode = sweepMode;
+        this.refunds = Map.copyOf(refunds);
         for (int i = 0; i < counts.length; i++) {
             counts[i] = new LongAdder();
         }
@@ -51,6 +54,10 @@ public final class Rule {
 
     public SweepMode sweepMode() {
         return sweepMode;
+    }
+
+    public Map<Identifier, Refund> refunds() {
+        return refunds;
     }
 
     public boolean has(Layer layer) {

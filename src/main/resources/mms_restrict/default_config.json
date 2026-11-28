@@ -39,40 +39,86 @@
         "weaponsexpanded:copper_glaive",
         "weaponsexpanded:copper_greatsword",
         "weaponsexpanded:copper_hammer",
-        "weaponsexpanded:copper_hatchet",
         "weaponsexpanded:diamond_glaive",
         "weaponsexpanded:diamond_greatsword",
         "weaponsexpanded:diamond_hammer",
-        "weaponsexpanded:diamond_hatchet",
         "weaponsexpanded:golden_glaive",
         "weaponsexpanded:golden_greatsword",
         "weaponsexpanded:golden_hammer",
-        "weaponsexpanded:golden_hatchet",
         "weaponsexpanded:iron_glaive",
         "weaponsexpanded:iron_greatsword",
         "weaponsexpanded:iron_hammer",
-        "weaponsexpanded:iron_hatchet",
         "weaponsexpanded:longbow",
         "weaponsexpanded:netherite_glaive",
         "weaponsexpanded:netherite_greatsword",
         "weaponsexpanded:netherite_hammer",
-        "weaponsexpanded:netherite_hatchet",
         "weaponsexpanded:stone_glaive",
         "weaponsexpanded:stone_greatsword",
         "weaponsexpanded:stone_hammer",
-        "weaponsexpanded:stone_hatchet",
         "weaponsexpanded:wooden_glaive",
         "weaponsexpanded:wooden_greatsword",
-        "weaponsexpanded:wooden_hammer",
-        "weaponsexpanded:wooden_hatchet"
+        "weaponsexpanded:wooden_hammer"
       ],
-      "layers": [
-        "obtain",
-        "hide",
-        "use",
-        "sweep"
-      ],
-      "reason": "replaced by mms-weapons"
+      "layers": ["obtain", "hide", "use", "sweep"],
+      "reason": "replaced by mms-weapons",
+      "refunds": {
+        "weaponsexpanded:copper_glaive": {
+          "item": "basicweapons:copper_glaive",
+          "count": 1
+        },
+        "weaponsexpanded:copper_greatsword": {
+          "item": "expanded_weaponry:copper_greatsword",
+          "count": 1
+        },
+        "weaponsexpanded:diamond_glaive": {
+          "item": "basicweapons:diamond_glaive",
+          "count": 1
+        },
+        "weaponsexpanded:diamond_greatsword": {
+          "item": "expanded_weaponry:diamond_greatsword",
+          "count": 1
+        },
+        "weaponsexpanded:golden_glaive": {
+          "item": "basicweapons:golden_glaive",
+          "count": 1
+        },
+        "weaponsexpanded:golden_greatsword": {
+          "item": "expanded_weaponry:golden_greatsword",
+          "count": 1
+        },
+        "weaponsexpanded:iron_glaive": {
+          "item": "basicweapons:iron_glaive",
+          "count": 1
+        },
+        "weaponsexpanded:iron_greatsword": {
+          "item": "expanded_weaponry:iron_greatsword",
+          "count": 1
+        },
+        "weaponsexpanded:netherite_glaive": {
+          "item": "basicweapons:netherite_glaive",
+          "count": 1
+        },
+        "weaponsexpanded:netherite_greatsword": {
+          "item": "expanded_weaponry:netherite_greatsword",
+          "count": 1
+        },
+        "weaponsexpanded:stone_glaive": {
+          "item": "basicweapons:stone_glaive",
+          "count": 1
+        },
+        "weaponsexpanded:stone_greatsword": {
+          "item": "expanded_weaponry:stone_greatsword",
+          "count": 1
+        },
+        "weaponsexpanded:wooden_glaive": {
+          "item": "basicweapons:wooden_glaive",
+          "count": 1
+        },
+        "weaponsexpanded:wooden_greatsword": {
+          "item": "expanded_weaponry:wooden_greatsword",
+          "count": 1
+        }
+      }
     },
     {
       "name": "creative-embargo",
@@ -98,13 +144,6 @@
         "expanded_weaponry:golden_dagger",
         "expanded_weaponry:diamond_dagger",
         "expanded_weaponry:netherite_dagger",
-        "weaponsexpanded:wooden_hatchet",
-        "weaponsexpanded:stone_hatchet",
-        "weaponsexpanded:copper_hatchet",
-        "weaponsexpanded:iron_hatchet",
-        "weaponsexpanded:golden_hatchet",
-        "weaponsexpanded:diamond_hatchet",
-        "weaponsexpanded:netherite_hatchet",
         "weaponsexpanded:wooden_greatsword",
         "weaponsexpanded:stone_greatsword",
         "weaponsexpanded:copper_greatsword",
@@ -222,11 +261,7 @@
         "mms_weapons:volucite_warhammer",
         "mms_weapons:heavy_hammer"
       ],
-      "layers": [
-        "obtain",
-        "hide",
-        "sweep"
-      ],
+      "layers": ["obtain", "hide", "sweep"],
       "reason": "hammers only in iron, netherite and phoenix, like Paladins armor; the hulk hammer stays as an outlier"
     },
     {
@@ -263,45 +298,48 @@
     },
     {
       "name": "unstable-recipe-embargo",
-      "match": [
+      "recipes": [
+        "aerialhell:crystal_from_ruby_bucket_freezing",
+        "aerialhell:diamond_shuriken",
+        "aerialhell:frozen_chicken_freezing",
+        "aerialhell:frozen_mutton_freezing",
+        "aerialhell:gold_shuriken",
+        "aerialhell:iron_shuriken",
+        "aerialhell:netherite_shuriken",
+        "aerialhell:stellar_clay_vibration",
+        "aerialhell:vibrant_chicken_vibration",
         "uselessreptile:dragon_helmet_iron",
         "uselessreptile:dragon_helmet_gold",
         "uselessreptile:dragon_helmet_diamond",
+        "uselessreptile:dragon_helmet_copper",
         "uselessreptile:dragon_chestplate_iron",
         "uselessreptile:dragon_chestplate_gold",
         "uselessreptile:dragon_chestplate_diamond",
+        "uselessreptile:dragon_chestplate_copper",
         "uselessreptile:dragon_tail_armor_iron",
         "uselessreptile:dragon_tail_armor_gold",
         "uselessreptile:dragon_tail_armor_diamond",
+        "uselessreptile:dragon_tail_armor_copper",
         "uselessreptile:vortex_horn",
-        "uselessreptile:flute",
-        "aerialhell:iron_shuriken",
-        "aerialhell:gold_shuriken",
-        "aerialhell:diamond_shuriken",
-        "aerialhell:netherite_shuriken",
-        "aerialhell:frozen_chicken",
-        "aerialhell:vibrant_chicken",
-        "aerialhell:frozen_mutton",
-        "aerialhell:crystal_block",
-        "aerialhell:stellar_clay"
+        "uselessreptile:flute*"
       ],
       "layers": ["obtain"],
-      "reason": "unstable mod items are not craftable"
+      "reason": "unstable mod recipes are removed; the items stay obtainable from loot and trades"
     },
     {
       "name": "alexscaves-recipe-embargo",
-      "match": [
-        "alexscaves:cookie_block",
-        "alexscaves:metal_barrel",
-        "alexscaves:hollow_bone",
-        "alexscaves:thin_bone",
-        "alexscaves:cinder_brick",
+      "recipes": [
         "alexscaves:bone_nodule",
+        "alexscaves:cinder_brick",
+        "alexscaves:cookie_block",
         "alexscaves:fern_thatch",
-        "alexscaves:smooth_bone"
+        "alexscaves:furnace/smooth_bone_smelting",
+        "alexscaves:hollow_bone",
+        "alexscaves:metal_barrel_from_iron",
+        "alexscaves:thin_bone"
       ],
       "layers": ["obtain"],
-      "reason": "Alex's Caves items are not craftable"
+      "reason": "Alex's Caves recipes are removed"
     },
     {
       "name": "fantasy-armor-embargo",

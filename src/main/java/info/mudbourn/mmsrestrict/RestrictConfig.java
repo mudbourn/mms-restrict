@@ -22,8 +22,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.EnumSet;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 // The parsed config/mms-restrict.json.
@@ -138,7 +140,23 @@ public record RestrictConfig(
         }
 
         SweepMode sweepMode = json.has("sweep_mode") ? parseMode(GsonHelper.getAsString(json, "sweep_mode"), null) : null;
-        return new Rule(name, matches, recipes, layers, dimensions, GsonHelper.getAsString(json, "reason", "restricted"), sweepMode);
+        return new Rule(name, matches, recipes, layers, dimensions, GsonHelper.getAsString(json, "reason", "restricted"), sweepMode, parseRefunds(name, json));
+    }
+
+    private static Map<Identifier, Refund> parseRefunds(String ruleName, JsonObject json) {
+        Map<Identifier, Refund> refunds = new HashMap<>();
+        JsonObject object = GsonHelper.getAsJsonObject(json, "refunds", new JsonObject());
+        for (Map.Entry<String, JsonElement> entry : object.entrySet()) {
+            Identifier swept = Identifier.tryParse(entry.getKey());
+            JsonObject body = entry.getValue().isJsonObject() ? entry.getValue().getAsJsonObject() : new JsonObject();
+            Identifier item = Identifier.tryParse(GsonHelper.getAsString(body, "item", ""));
+            if (swept == null || item == null) {
+                LOG.warn("Rule '{}': invalid refund '{}'", ruleName, entry.getKey());
+            } else {
+                refunds.put(swept, new Refund(item, Math.max(1, GsonHelper.getAsInt(body, "count", 1))));
+            }
+        }
+        return refunds;
     }
 
     private static SweepMode parseMode(String name, SweepMode fallback) {

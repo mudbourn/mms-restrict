@@ -7,6 +7,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.permissions.Permission;
 import net.minecraft.server.permissions.PermissionLevel;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -83,6 +84,19 @@ public final class RestrictApi {
         for (Rule rule : config.rules()) {
             if (rule.has(Layer.WORLDGEN) && rule.inDimension(dimension.identifier()) && rule.matchesId(structure)) {
                 rule.add(Stat.STRUCTURES, 1);
+                denied = true;
+            }
+        }
+        return denied;
+    }
+
+    /** Whether a worldgen rule bans natural and event spawns of the entity type in the dimension. */
+    public static boolean isSpawnDenied(ResourceKey<Level> dimension, EntityType<?> type) {
+        Identifier id = BuiltInRegistries.ENTITY_TYPE.getKey(type);
+        boolean denied = false;
+        for (Rule rule : config.rules()) {
+            if (rule.has(Layer.WORLDGEN) && rule.inDimension(dimension.identifier()) && rule.matchesId(id)) {
+                rule.add(Stat.SPAWNS, 1);
                 denied = true;
             }
         }
