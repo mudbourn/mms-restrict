@@ -188,6 +188,48 @@
       "reason": "kite shields and morningstars only in iron, netherite and phoenix, like Paladins armor"
     },
     {
+      "name": "hammer-tiers",
+      "match": [
+        "weaponsexpanded:wooden_warhammer",
+        "weaponsexpanded:stone_warhammer",
+        "weaponsexpanded:copper_warhammer",
+        "weaponsexpanded:golden_warhammer",
+        "weaponsexpanded:diamond_warhammer",
+        "basicweapons:tin_hammer",
+        "basicweapons:bronze_hammer",
+        "paladins:aeternium_great_hammer",
+        "paladins:aether_great_hammer",
+        "paladins:ruby_great_hammer",
+        "mms_weapons:azurite_hammer",
+        "mms_weapons:azurite_warhammer",
+        "mms_weapons:lunatic_hammer",
+        "mms_weapons:lunatic_warhammer",
+        "mms_weapons:magmatic_gel_hammer",
+        "mms_weapons:magmatic_gel_warhammer",
+        "mms_weapons:obsidian_hammer",
+        "mms_weapons:obsidian_warhammer",
+        "mms_weapons:ruby_hammer",
+        "mms_weapons:ruby_warhammer",
+        "mms_weapons:shadoline_hammer",
+        "mms_weapons:shadoline_warhammer",
+        "mms_weapons:shadow_hammer",
+        "mms_weapons:shadow_warhammer",
+        "mms_weapons:sky_wood_hammer",
+        "mms_weapons:sky_wood_warhammer",
+        "mms_weapons:stellar_stone_hammer",
+        "mms_weapons:stellar_stone_warhammer",
+        "mms_weapons:volucite_hammer",
+        "mms_weapons:volucite_warhammer",
+        "mms_weapons:heavy_hammer"
+      ],
+      "layers": [
+        "obtain",
+        "hide",
+        "sweep"
+      ],
+      "reason": "hammers only in iron, netherite and phoenix, like Paladins armor; the hulk hammer stays as an outlier"
+    },
+    {
       "name": "class-gear-unsmeltable",
       "recipes": [
         "paladins:*_from_smelting_*",
